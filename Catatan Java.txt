@@ -1,3 +1,0 @@
-perbedaan interface dengan abstract class 
-- interface hanya memiliki method tanpa adanya body pada methodnya ( implements )
-- abstract memiliki method tanpa body dan juga dapat di buat body nya ( extends )

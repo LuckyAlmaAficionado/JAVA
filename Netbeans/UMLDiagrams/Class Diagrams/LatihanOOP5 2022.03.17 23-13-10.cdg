@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="LatihanOOP5">
+  <ClassDiagramComponents>
+    <Class name="Siswa" package="latihanoop5" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="nama" type="String" visibility="private"/>
+        <Field name="nim" type="String" visibility="private"/>
+        <Field name="nilaiTeori" type="int" visibility="private"/>
+        <Field name="nilaiPraktek" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="setNim" returnType="void" visibility="public">
+          <Argument type="String" name="nim"/>
+        </Method>
+        <Method name="setNama" returnType="void" visibility="public">
+          <Argument type="String" name="nama"/>
+        </Method>
+        <Method name="setTeori" returnType="void" visibility="public">
+          <Argument type="int" name="nilaiTeori"/>
+        </Method>
+        <Method name="setPraktek" returnType="void" visibility="public">
+          <Argument type="int" name="nilaiPraktek"/>
+        </Method>
+        <Method name="getNim" returnType="String" visibility="public"/>
+        <Method name="getNama" returnType="String" visibility="public"/>
+        <Method name="getTeori" returnType="int" visibility="public"/>
+        <Method name="getPraktek" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="LatihanOOP5" package="latihanoop5" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

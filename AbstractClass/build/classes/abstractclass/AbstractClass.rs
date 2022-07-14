@@ -1,2 +1,0 @@
-abstractclass.AbstractClass
-abstractclass.Resep

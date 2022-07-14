@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="coreten2">
+  <ClassDiagramComponents>
+    <Class name="SuperClass" package="coretam" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="a" type="int" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="int" name="p"/>
+          <Argument type="int" name="q"/>
+          <Argument type="int" name="r"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="Show" returnType="void" visibility="package"/>
+        <Method name="Show" returnType="void" visibility="package">
+          <Argument type="String" name="s"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SubClass" package="coretam" visibility="public" xPosition="315.0" yPosition="264.0">
+      <Fields>
+        <Field name="d" type="int" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="int" name="l"/>
+          <Argument type="int" name="m"/>
+          <Argument type="int" name="n"/>
+          <Argument type="int" name="o"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="Show" returnType="void" visibility="package"/>
+        <Method name="Show" returnType="void" visibility="package">
+          <Argument type="String" name="x"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="coretam.SubClass" target="coretam.SuperClass"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
