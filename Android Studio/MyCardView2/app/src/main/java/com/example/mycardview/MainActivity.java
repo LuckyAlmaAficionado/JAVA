@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         receRecyclerView.setLayoutManager(layoutManager);
 
         data = new ArrayList<>();
+
+        MyItem a = new MyItem();
         for (int i = 0; i < MyItem.judulFilm.length; i++){
             data.add(new ItemModel(
                     MyItem.judulFilm[i],
