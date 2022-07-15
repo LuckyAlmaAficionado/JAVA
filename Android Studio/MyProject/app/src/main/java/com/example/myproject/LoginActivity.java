@@ -13,38 +13,42 @@ import java.sql.*;
 public class LoginActivity extends AppCompatActivity {
 
     TextView msg;
-    Button showMsg;
+    Button btnMsg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         msg = findViewById(R.id.textView);
-        showMsg = findViewById(R.id.button);
-        showMsg.setOnClickListener(new View.OnClickListener() {
+        btnMsg = findViewById(R.id.btnMSG);
+        btnMsg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 new Async().execute();
+                msg.setText("ini di click");
             }
         });
     }
 
     class Async extends AsyncTask<Void, Void, Void> {
-        Connection Con;
-        Statement st;
-        ResultSet rs;
-        PreparedStatement ps;
+        Connection connection;
 
         @Override
         protected Void doInBackground(Void... voids) {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
-                Con = DriverManager.getConnection("jdbc:mysql://192.168.100.8:3306/db_android", "root", "pass");
-                showMsg.setText("Connection Successfully!");
+                connection = DriverManager.getConnection("jdbc:mysql://192.168.100.8:3306/db_android", "root", "pass");
+                Statement statement = connection.createStatement();
+                msg.setText("Conenction Successfuly!");
             } catch (Exception e) {
-                showMsg.setText("Connection Failed!");
+                msg.setText("Connection Failed");
             }
             return null;
+        }
+
+        // send connection
+        public Connection getConnection(){
+            return this.connection;
         }
     }
 }

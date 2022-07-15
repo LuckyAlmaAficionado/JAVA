@@ -1,4 +1,4 @@
-package com.example.myproject;
+package com.example.mycardview;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,14 +10,5 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        connection();
-    }
-
-    public void connection(){
-        LoginActivity.Async a = null;
-        a.getConnection();
-        if (a.getConnection() != null){
-            System.out.println("Connection successfuly!");
-        }
     }
 }
