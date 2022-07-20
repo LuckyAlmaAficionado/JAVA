@@ -13,7 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyProject">
         <activity
-            android:name=".LoginActivity"
+            android:name=".UpdateDataMahasiswa"
+            android:exported="true" />
+        <activity
+            android:name=".AddDataMahasiswa"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
