@@ -21,7 +21,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     ArrayList book_id, book_title, book_author, book_pages;
 
     CustomAdapter(Activity activity, Context context, ArrayList book_id, ArrayList book_title,
-                  ArrayList book_author, ArrayList book_pages){
+                  ArrayList book_author, ArrayList book_pages) {
         this.activity = activity;
         this.context = context;
         this.book_id = book_id;
@@ -39,7 +39,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder,int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.book_id_txt.setText(String.valueOf(book_id.get(position)));
         holder.book_title_txt.setText(String.valueOf(book_title.get(position)));
         holder.book_author_txt.setText(String.valueOf(book_author.get(position)));

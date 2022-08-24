@@ -1,9 +1,5 @@
 package com.example.bookapplibrary;
 
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.Menu;
@@ -12,6 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class UpdateActivity extends AppCompatActivity {
 
@@ -59,13 +59,19 @@ public class UpdateActivity extends AppCompatActivity {
 
             }
         });
+    }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.my_menu, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
     // untuk mengambil data yang dikirim menggunakan putExtra dan di ambil dengan hasExtra
-    void getAndSetIntentData(){
+    void getAndSetIntentData() {
         if (getIntent().hasExtra("id") && getIntent().hasExtra("title") &&
-                getIntent().hasExtra("author") && getIntent().hasExtra("pages")){
+                getIntent().hasExtra("author") && getIntent().hasExtra("pages")) {
             // Getting data from Intent
             id = getIntent().getStringExtra("id");
             title = getIntent().getStringExtra("title");
@@ -76,12 +82,12 @@ public class UpdateActivity extends AppCompatActivity {
             title_input.setText(title);
             author_input.setText(author);
             pages_input.setText(pages);
-        }else{
+        } else {
             Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();
         }
     }
 
-    void confirmDialog(){
+    void confirmDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Delete " + title + "? ");
         builder.setMessage("Are you sure want to delete " + title + " ?");

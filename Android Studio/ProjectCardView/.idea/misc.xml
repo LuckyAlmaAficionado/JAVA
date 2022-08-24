@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Coding/Java/Android Studio/ProjectCardView/app/src/main/res/drawable/my_row.xml" value="0.2875" />
+        <entry key="..\:/Coding/Java/Android Studio/ProjectCardView/app/src/main/res/layout/activity_add.xml" value="0.2713541666666667" />
         <entry key="..\:/Coding/Java/Android Studio/ProjectCardView/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Coding/Java/Android Studio/ProjectCardView/app/src/main/res/layout/my_row.xml" value="0.2713541666666667" />
       </map>
     </option>
   </component>
